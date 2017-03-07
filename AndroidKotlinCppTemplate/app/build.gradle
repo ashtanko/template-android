@@ -1,0 +1,124 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
+
+    //Kotlin
+    compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+}
+
+android {
+
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+
+        applicationId "io.shtanko.kotlintemplate"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        ndk {
+            abiFilters 'x86', 'x86_64', 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+        }
+
+        externalNativeBuild {
+            cmake {
+                cppFlags "-frtti -fexceptions"
+                arguments '-DANDROID_TOOLCHAIN=clang',
+                        '-DANDROID_STL=gnustl_static',
+                        '-DANDROID_PLATFORM=android-14'
+            }
+        }
+
+    }
+    buildTypes {
+        debug {
+            debuggable true
+            jniDebuggable true
+        }
+        release {
+            debuggable false
+            jniDebuggable false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        foss {
+            debuggable true
+            jniDebuggable true
+        }
+    }
+
+    productFlavors {
+        arm7 {
+            ndk {
+                abiFilter 'armeabi-v7a'
+            }
+            versionCode = 0
+        }
+        arm8 {
+            ndk {
+                abiFilters 'arm64-v8a'
+            }
+            versionCode = 0
+        }
+        arm {
+            ndk {
+                abiFilter 'armeabi'
+            }
+            versionCode = 0
+        }
+        x86 {
+            ndk {
+                abiFilter 'x86'
+            }
+            versionCode = 0
+        }
+        x86_64 {
+            ndk {
+                abiFilter 'x86_64'
+            }
+            versionCode = 0
+        }
+        mips {
+            ndk {
+                abiFilters 'mips', 'mips64'
+            }
+            versionCode = 0
+        }
+        all {
+            ndk {
+                abiFilters 'mips', 'mips64', 'x86', 'x86_64'
+            }
+            versionCode = 0
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
+        }
+    }
+
+    sourceSets {
+        main {
+            java.srcDirs += 'src/main/kotlin'
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            assets.srcDirs = ['src/main/assets']
+            res.srcDirs = [
+                    'src/main/res/main',
+                    'src/main/res/resource',
+                    'src/main/res']
+        }
+    }
+}
