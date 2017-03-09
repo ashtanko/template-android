@@ -17,6 +17,19 @@ android {
     }
   }
 
+  productFlavors {
+    free {
+      jackOptions {
+        jackInProcess false // will run Jack out-of-process for all free variants
+      }
+    }
+    paid {} // paid variants will run Jack in-process
+  }
+  dexOptions {
+
+    javaMaxHeapSize "2048M" // used by the out-of-process Jack, ignored if running in-process
+  }
+
   compileOptions {
     sourceCompatibility JavaVersion.VERSION_1_8
     targetCompatibility JavaVersion.VERSION_1_8
@@ -32,5 +45,5 @@ android {
 
 dependencies {
   compile 'com.android.support:appcompat-v7:25.2.0'
-  compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
+  compile 'com.android.support.constraint:constraint-layout:1.0.2'
 }
