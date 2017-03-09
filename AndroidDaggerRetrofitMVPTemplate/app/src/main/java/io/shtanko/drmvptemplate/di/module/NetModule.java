@@ -7,12 +7,15 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import dagger.Module;
 import dagger.Provides;
+import io.reactivex.Scheduler;
+import io.reactivex.schedulers.Schedulers;
 import io.shtanko.drmvptemplate.App;
 import javax.inject.Singleton;
 import okhttp3.Cache;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 @Module public class NetModule {
@@ -53,9 +56,13 @@ import retrofit2.converter.gson.GsonConverterFactory;
   }
 
   @Provides @Singleton Retrofit provideRetrofit(Gson gson, OkHttpClient okHttpClient) {
+    RxJava2CallAdapterFactory rxAdapter =
+        RxJava2CallAdapterFactory.createWithScheduler(Schedulers.io());
     Retrofit retrofit =
         new Retrofit.Builder().addConverterFactory(GsonConverterFactory.create(gson))
             .baseUrl(baseURL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .addCallAdapterFactory(rxAdapter)
             .client(okHttpClient)
             .build();
     return retrofit;
