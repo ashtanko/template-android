@@ -1,41 +1,47 @@
 apply plugin: 'com.android.application'
 
+def supportVersion = '25.2.0'
+
 dependencies {
-    compile 'com.android.support:appcompat-v7:25.2.0'
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
+
+  /*
+  GOOGLE LIBS
+  */
+  compile "com.android.support:appcompat-v7:$supportVersion"
+  compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
+
 }
 
 android {
 
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+  compileSdkVersion 25
+  buildToolsVersion "25.0.2"
 
-    defaultConfig {
-        applicationId "io.shtanko.basetemplate"
-        minSdkVersion 15
-        targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-    }
+  defaultConfig {
+    applicationId "io.shtanko.basetemplate"
+    minSdkVersion 15
+    targetSdkVersion 25
+    versionCode 1
+    versionName "1.0"
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+  }
 
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
+  }
 
-    sourceSets {
-        main {
-            java.srcDirs += 'src/main/java'
-            manifest.srcFile 'src/main/AndroidManifest.xml'
-            assets.srcDirs = ['src/main/assets']
-            res.srcDirs = [
-                    'src/main/res/main',
-                    'src/main/res/resource',
-                    'src/main/res']
-        }
+  sourceSets {
+    main {
+      java.srcDirs += 'src/main/java'
+      manifest.srcFile 'src/main/AndroidManifest.xml'
+      assets.srcDirs = ['src/main/assets']
+      res.srcDirs = ['src/main/res/main',
+                     'src/main/res/resource',
+                     'src/main/res']
     }
+  }
 }
 
