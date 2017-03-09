@@ -6,8 +6,8 @@ import android.os.Bundle;
 public class MainActivity extends AppCompatActivity {
 
   @Override protected void onCreate(Bundle savedInstanceState) {
+    ((App) getApplication()).getAppComponent().inject(this);
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-
   }
 }
