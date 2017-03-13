@@ -1,5 +1,11 @@
 apply plugin: 'com.android.application'
 
+def supportVersion  = '25.2.0'
+def daggerVersion   = '2.9'
+def retrofitVersion = '2.2.0'
+def okHTTPVersion   = '3.6.0'
+def moxyVersion     = '1.4.6'
+
 android {
 
   compileSdkVersion 25
@@ -24,18 +30,18 @@ android {
 dependencies {
 
   // GOOGLE LIBS
-  compile 'com.android.support:appcompat-v7:25.2.0'
+  compile "com.android.support:appcompat-v7:$supportVersion"
   compile 'com.android.support.constraint:constraint-layout:1.0.2'
-  compile "com.google.dagger:dagger:2.9"
-  annotationProcessor "com.google.dagger:dagger-compiler:2.9"
+  compile "com.google.dagger:dagger:$daggerVersion"
+  annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
   compile 'com.google.code.gson:gson:2.7'
 
   // SQUARE LIBS
-  compile 'com.squareup.retrofit2:retrofit:2.2.0'
-  compile 'com.squareup.retrofit2:converter-gson:2.2.0'
-  compile 'com.squareup.okhttp3:okhttp:3.6.0'
-  compile 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
-  compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+  compile "com.squareup.retrofit2:retrofit:$retrofitVersion"
+  compile "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+  compile "com.squareup.okhttp3:okhttp:$okHTTPVersion"
+  compile "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+  compile "com.squareup.okhttp3:logging-interceptor:$okHTTPVersion"
 
   // RX LIBS
   compile 'io.reactivex.rxjava2:rxjava:2.0.6'
@@ -43,4 +49,9 @@ dependencies {
 
   //
   provided 'javax.annotation:jsr250-api:1.0'
+
+  // ARELLO MOBILE LIBS
+  compile "com.arello-mobile:moxy:$moxyVersion"
+  provided "com.arello-mobile:moxy-compiler:$moxyVersion"
+  annotationProcessor "com.arello-mobile:moxy-compiler:$moxyVersion"
 }
