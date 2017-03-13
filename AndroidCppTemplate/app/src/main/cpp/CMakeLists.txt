@@ -1,15 +1,15 @@
 cmake_minimum_required(VERSION 3.4.1)
 
-project(native-lib)
+project(main)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11")
 
-add_library( native-lib
+add_library( main
              SHARED
-             native-lib.cpp )
+             main.cpp )
 
 find_library( log-lib
               log )
 
-target_link_libraries( native-lib
+target_link_libraries( main
                        ${log-lib} )
