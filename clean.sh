@@ -8,7 +8,8 @@ function clean(){
 			cd $f
 			if [ -d $f/build ]; then
 				let "build_dir_count = $build_dir_count + 1"
-				echo "build dir is found this: $f"
+				echo "build dir was removed from: $f/build"
+				rm -rf $f/build
 			fi
 		clean $f
 		fi
