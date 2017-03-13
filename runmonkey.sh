@@ -1,13 +1,16 @@
 #! /usr/bin/env bash
 
-if which adb >/dev/null; then
-	adb shell monkey -p your.package.name -v 500
-else
-	echo "Error: adb does not exist"
-exit 1
-fi
-
 function run() {
-echo "run"
+	if which adb >/dev/null; then
+		echo "enter an app package name"
+		read -r packagename
+		echo "enter pseudo-random events count, example 500"
+		read -r count
+		adb shell monkey -p $packagename -v $count
+	else
+		echo "Error: adb does not exist"
+		exit 1
+	fi
 }
 
+run
