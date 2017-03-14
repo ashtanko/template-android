@@ -1,0 +1,16 @@
+language: android
+
+android:
+  components:
+    # Update Android SDK Tools
+    - tools
+
+    - build-tools-23.0.1
+    - android-23
+
+    # Support library
+    - extra-android-support
+    - extra-android-m2repository
+
+script:
+     cd AndroidBaseTemplate && chmod +x ./gradlew && ./gradlew build && cd - && cd AndroidCppTemplate && chmod +x ./gradlew && ./gradlew build && cd - && cd AndroidDaggerRetrofitMVPTemplate && chmod +x ./gradlew && ./gradlew build && cd -
