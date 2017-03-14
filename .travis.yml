@@ -13,4 +13,4 @@ android:
     - extra-android-m2repository
 
 script:
-     cd AndroidBaseTemplate && chmod +x ./gradlew && ./gradlew build && cd - && cd AndroidCppTemplate && chmod +x ./gradlew && ./gradlew build && cd - && cd AndroidDaggerRetrofitMVPTemplate && chmod +x ./gradlew && ./gradlew build && cd -
+     - chmod +x ./buildall.sh
