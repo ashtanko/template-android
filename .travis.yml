@@ -13,4 +13,4 @@ android:
     - extra-android-m2repository
 
 script:
-     - chmod +x ./buildall.sh
+     - chmod +x ./buildall.sh && ./buildall.sh
