@@ -15,7 +15,8 @@ function print() {
 
 function build() {
 	echo "build project $1"
-	cd $1 && chmod +x ./gradlew && ./gradlew build
+
+	cd $1 && gradle wrapper && chmod +x ./gradlew && ./gradlew build
 }
 
 function scan() {
