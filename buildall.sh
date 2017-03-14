@@ -10,9 +10,6 @@ echo ""
 function print() {
 	for f in $1/*; do
 		echo "$f"
-		if [ -d $f ]; then
-			print $f
-		fi
 	done
 }
 
@@ -26,8 +23,8 @@ function scan() {
 		echo "scan $f"
 		if [ -d $f ]; then
 			if [ -f $f/gradlew ]; then
-				print $f
 				build $f
+				print $f
 			fi
 		fi
 	done
