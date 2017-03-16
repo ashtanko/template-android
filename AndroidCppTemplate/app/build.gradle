@@ -1,5 +1,12 @@
 apply plugin: 'com.android.application'
 
+def globalVars = rootProject.extensions.getByName("ext")
+
+dependencies {
+    // GOOGLE LIBS
+    compile "com.android.support:appcompat-v7:${globalVars["supportVersion"]}"
+}
+
 android {
 
     compileSdkVersion 25
@@ -96,6 +103,3 @@ android {
     }
 }
 
-dependencies {
-    compile 'com.android.support:appcompat-v7:25.2.0'
-}

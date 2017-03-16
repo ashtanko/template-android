@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
 
-def supportVersion  = '25.2.0'
+def globalVars = rootProject.extensions.getByName("ext")
+
+// TODO move to global vars
 def daggerVersion   = '2.9'
 def retrofitVersion = '2.2.0'
 def okHTTPVersion   = '3.6.0'
@@ -30,7 +32,7 @@ android {
 dependencies {
 
   // GOOGLE LIBS
-  compile "com.android.support:appcompat-v7:$supportVersion"
+  compile "com.android.support:appcompat-v7:${globalVars["supportVersion"]}"
   compile 'com.android.support.constraint:constraint-layout:1.0.2'
   compile "com.google.dagger:dagger:$daggerVersion"
   annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"

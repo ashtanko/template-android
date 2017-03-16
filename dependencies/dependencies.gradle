@@ -1,0 +1,10 @@
+allprojects {
+  repositories {
+    jcenter()
+  }
+}
+
+ext {
+supportVersion = '25.2.0'
+
+}

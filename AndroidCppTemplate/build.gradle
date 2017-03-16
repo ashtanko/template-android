@@ -1,3 +1,5 @@
+apply from: '../dependencies/dependencies.gradle'
+
 buildscript {
     repositories {
         jcenter()

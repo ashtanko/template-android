@@ -1,5 +1,17 @@
 apply plugin: 'com.android.application'
 
+def globalVars = rootProject.extensions.getByName("ext")
+
+dependencies {
+  compile "com.android.support:appcompat-v7:${globalVars["supportVersion"]}"
+  compile 'com.android.support.constraint:constraint-layout:1.0.2'
+
+  // dagger 2
+  compile 'com.google.dagger:dagger:2.9'
+  annotationProcessor 'com.google.dagger:dagger-compiler:2.9'
+}
+
+
 android {
 
   compileSdkVersion 25
@@ -41,13 +53,4 @@ android {
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
   }
-}
-
-dependencies {
-  compile 'com.android.support:appcompat-v7:25.2.0'
-  compile 'com.android.support.constraint:constraint-layout:1.0.2'
-
-  // dagger 2
-  compile 'com.google.dagger:dagger:2.9'
-  annotationProcessor 'com.google.dagger:dagger-compiler:2.9'
 }

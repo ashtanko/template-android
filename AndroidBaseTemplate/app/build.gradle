@@ -1,13 +1,11 @@
 apply plugin: 'com.android.application'
 
-def supportVersion = '25.2.0'
+def globalVars = rootProject.extensions.getByName("ext")
 
 dependencies {
 
-  /*
-  GOOGLE LIBS
-  */
-  compile "com.android.support:appcompat-v7:$supportVersion"
+  // GOOGLE LIBS
+  compile "com.android.support:appcompat-v7:${globalVars["supportVersion"]}"
   compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
 
 }
