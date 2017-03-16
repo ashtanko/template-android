@@ -3,15 +3,14 @@ apply plugin: 'com.android.application'
 def globalVars = rootProject.extensions.getByName("ext")
 
 // TODO move to global vars
-def daggerVersion   = '2.9'
 def retrofitVersion = '2.2.0'
 def okHTTPVersion   = '3.6.0'
 def moxyVersion     = '1.4.6'
 
 android {
 
-  compileSdkVersion 25
-  buildToolsVersion "25.0.2"
+  compileSdkVersion globalVars["compileSdkVersion"]
+  buildToolsVersion globalVars["buildToolsVersion"]
 
   defaultConfig {
 
@@ -33,9 +32,9 @@ dependencies {
 
   // GOOGLE LIBS
   compile "com.android.support:appcompat-v7:${globalVars["supportVersion"]}"
-  compile 'com.android.support.constraint:constraint-layout:1.0.2'
-  compile "com.google.dagger:dagger:$daggerVersion"
-  annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
+  compile "com.android.support.constraint:constraint-layout:${globalVars["constraintLayoutVersion"]}"
+  compile "com.google.dagger:dagger:${globalVars["daggerVersion"]}"
+  annotationProcessor "com.google.dagger:dagger-compiler:${globalVars["daggerVersion"]}"
   compile 'com.google.code.gson:gson:2.7'
 
   // SQUARE LIBS

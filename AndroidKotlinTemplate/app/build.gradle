@@ -11,17 +11,17 @@ repositories {
 dependencies {
     // GOOGLE LIBS
     compile "com.android.support:appcompat-v7:${globalVars["supportVersion"]}"
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
+    compile "com.android.support.constraint:constraint-layout:${globalVars["constraintLayoutVersion"]}"
 
     // KOTLIN
-    compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-reflect:${globalVars["kotlinVersion"]}"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:${globalVars["kotlinVersion"]}"
 }
 
 android {
 
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion globalVars["compileSdkVersion"]
+    buildToolsVersion globalVars["buildToolsVersion"]
 
     defaultConfig {
         applicationId "io.shtanko.kotlintemplate"

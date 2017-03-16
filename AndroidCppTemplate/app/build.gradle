@@ -9,8 +9,8 @@ dependencies {
 
 android {
 
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion globalVars["compileSdkVersion"]
+    buildToolsVersion globalVars["buildToolsVersion"]
 
     defaultConfig {
         applicationId "io.shtanko.cpptemplate"
