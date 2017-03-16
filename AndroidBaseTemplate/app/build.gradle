@@ -5,6 +5,7 @@ def globalVars = rootProject.extensions.getByName("ext")
 dependencies {
   // GOOGLE LIBS
   compile "com.android.support:appcompat-v7:${globalVars["supportVersion"]}"
+  compile "com.android.support:recyclerview-v7:${globalVars["supportVersion"]}"
   compile "com.android.support.constraint:constraint-layout:${globalVars["constraintLayoutVersion"]}"
 
 }
