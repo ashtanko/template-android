@@ -1,11 +1,11 @@
-package io.shtanko.drmvptemplate;
+package io.shtanko.featuretemplate;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import com.google.gson.Gson;
+import io.shtanko.drmvptemplate.R;
 import java.util.Arrays;
-import java.util.Objects;
 import javax.inject.Inject;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;

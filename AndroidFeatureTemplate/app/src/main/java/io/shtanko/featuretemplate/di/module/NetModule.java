@@ -1,4 +1,4 @@
-package io.shtanko.drmvptemplate.di.module;
+package io.shtanko.featuretemplate.di.module;
 
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
@@ -7,9 +7,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import dagger.Module;
 import dagger.Provides;
-import io.reactivex.Scheduler;
 import io.reactivex.schedulers.Schedulers;
-import io.shtanko.drmvptemplate.App;
+import io.shtanko.featuretemplate.App;
 import javax.inject.Singleton;
 import okhttp3.Cache;
 import okhttp3.OkHttpClient;

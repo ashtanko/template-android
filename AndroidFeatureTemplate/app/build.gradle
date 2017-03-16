@@ -14,7 +14,7 @@ android {
 
   defaultConfig {
 
-    applicationId "io.shtanko.drmvptemplate"
+    applicationId "io.shtanko.featuretemplate"
     minSdkVersion 15
     targetSdkVersion 25
     versionCode 1

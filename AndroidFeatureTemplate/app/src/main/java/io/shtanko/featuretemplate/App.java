@@ -1,9 +1,9 @@
-package io.shtanko.drmvptemplate;
+package io.shtanko.featuretemplate;
 
 import android.app.Application;
-import io.shtanko.drmvptemplate.di.component.AppComponent;
-import io.shtanko.drmvptemplate.di.component.DaggerAppComponent;
-import io.shtanko.drmvptemplate.di.module.NetModule;
+import io.shtanko.featuretemplate.di.component.AppComponent;
+import io.shtanko.featuretemplate.di.component.DaggerAppComponent;
+import io.shtanko.featuretemplate.di.module.NetModule;
 
 public class App extends Application {
 
