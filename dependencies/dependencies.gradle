@@ -8,8 +8,8 @@ ext {
 // LIBS
 supportVersion = '25.2.0'
 constraintLayoutVersion = '1.0.2'
-kotlinVersion = '1.1.0'
-daggerVersion = '2.9'
+kotlinVersion = '1.1.1'
+daggerVersion = '2.10-rc4'
 
 compileSdkVersion = 25
 buildToolsVersion = '25.0.2'

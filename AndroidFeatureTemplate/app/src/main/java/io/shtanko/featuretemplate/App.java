@@ -13,7 +13,7 @@ public class App extends Application {
     super.onCreate();
 
     appComponent =
-        DaggerAppComponent.builder().netModule(new NetModule("https://api.github.com")).build();
+            DaggerAppComponent.builder().netModule(new NetModule("https://api.github.com")).build();
   }
 
   public AppComponent getAppComponent() {
