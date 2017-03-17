@@ -4,6 +4,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+import io.shtanko.basetemplate.R;
 import io.shtanko.basetemplate.model.Action;
 import java.util.List;
 
@@ -24,6 +26,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
   @Override public void onBindViewHolder(ViewHolder holder, int position) {
     Action action = actions.get(position);
+    holder.textViewNumber.setText(String.valueOf(action.getActionNumber()));
     holder.itemView.setTag(action);
   }
 
@@ -33,8 +36,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
   public static class ViewHolder extends RecyclerView.ViewHolder {
 
-    public ViewHolder(View itemView) {
+    TextView textViewNumber;
+
+   public ViewHolder(View itemView) {
       super(itemView);
+     textViewNumber = (TextView) itemView.findViewById(R.id.textViewNumber);
     }
   }
 }
