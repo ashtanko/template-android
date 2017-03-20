@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import io.shtanko.basetemplate.R;
-import io.shtanko.basetemplate.model.Action;
+import io.shtanko.basetemplate.data.model.Action;
 import java.util.List;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {

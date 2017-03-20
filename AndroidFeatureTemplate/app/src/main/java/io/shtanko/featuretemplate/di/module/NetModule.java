@@ -2,14 +2,18 @@ package io.shtanko.featuretemplate.di.module;
 
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+
 import dagger.Module;
 import dagger.Provides;
 import io.reactivex.schedulers.Schedulers;
 import io.shtanko.featuretemplate.App;
+
 import javax.inject.Singleton;
+
 import okhttp3.Cache;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;

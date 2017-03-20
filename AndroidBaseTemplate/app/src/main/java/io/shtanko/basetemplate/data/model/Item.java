@@ -1,4 +1,4 @@
-package io.shtanko.basetemplate.model;
+package io.shtanko.basetemplate.data.model;
 
 public class Item {
 

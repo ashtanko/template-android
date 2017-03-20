@@ -1,4 +1,4 @@
-package io.shtanko.basetemplate.model;
+package io.shtanko.basetemplate.data.model;
 
 import java.util.ArrayList;
 import java.util.List;
