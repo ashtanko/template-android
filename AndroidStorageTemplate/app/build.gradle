@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
 
 def globalVars = rootProject.extensions.getByName("ext")
 
