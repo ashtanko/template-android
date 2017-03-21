@@ -49,8 +49,9 @@ dependencies {
   compile 'io.reactivex.rxjava2:rxjava:2.0.6'
   compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
 
-  //
+  // OTHERS
   provided 'javax.annotation:jsr250-api:1.0'
+  compile 'ru.terrakok.cicerone:cicerone:1.1'
 
   // ARELLO MOBILE LIBS
   compile "com.arello-mobile:moxy:$moxyVersion"

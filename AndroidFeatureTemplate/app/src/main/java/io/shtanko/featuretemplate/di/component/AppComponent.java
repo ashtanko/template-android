@@ -1,7 +1,7 @@
 package io.shtanko.featuretemplate.di.component;
 
 import dagger.Component;
-import io.shtanko.featuretemplate.MainActivity;
+import io.shtanko.featuretemplate.ui.activity.MainActivity;
 import io.shtanko.featuretemplate.di.module.AppModule;
 import io.shtanko.featuretemplate.di.module.NetModule;
 import javax.inject.Singleton;

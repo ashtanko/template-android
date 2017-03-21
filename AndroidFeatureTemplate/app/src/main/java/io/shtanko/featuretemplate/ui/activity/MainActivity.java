@@ -1,10 +1,11 @@
-package io.shtanko.featuretemplate;
+package io.shtanko.featuretemplate.ui.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import com.google.gson.Gson;
 import io.shtanko.drmvptemplate.R;
+import io.shtanko.featuretemplate.App;
 import java.util.Arrays;
 import javax.inject.Inject;
 import okhttp3.OkHttpClient;
