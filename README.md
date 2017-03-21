@@ -6,7 +6,7 @@ A simple repository of templates for android
 
 ## Templates
 - [x] Android project with c/c++ & CMake
-- [x] Android project with actual libs (Dagger 2, Retrofit2, Gson2, OkHTTP3, RxJava2, RxAndroid2, Moxy )
+- [x] Android project with actual libs (Dagger 2, Retrofit2, Gson2, OkHTTP3, RxJava2, RxAndroid2, Moxy, Cicerone )
 - [x] Andorid project with enabled jack and jill
 - [x] Android project with kotlin
 - [x] Android project with kotlin & c/c++ support
