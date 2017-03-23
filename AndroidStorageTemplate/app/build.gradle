@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'realm-android'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 def globalVars = rootProject.extensions.getByName("ext")
 
@@ -9,6 +11,11 @@ dependencies {
   compile "com.android.support:recyclerview-v7:${globalVars["supportVersion"]}"
   compile "com.android.support.constraint:constraint-layout:${globalVars["constraintLayoutVersion"]}"
 
+  // KOTLIN
+  compile "org.jetbrains.kotlin:kotlin-reflect:${globalVars["kotlinVersion"]}"
+  compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:${globalVars["kotlinVersion"]}"
+
+  compile "com.github.kittinunf.fuel:fuel-android:${globalVars["kotlinVersion"]}"
 }
 
 android {
@@ -33,7 +40,7 @@ android {
 
   sourceSets {
     main {
-      java.srcDirs += 'src/main/java'
+      java.srcDirs += 'src/main/kotlin'
       manifest.srcFile 'src/main/AndroidManifest.xml'
       assets.srcDirs = ['src/main/assets']
       res.srcDirs = ['src/main/res/main',

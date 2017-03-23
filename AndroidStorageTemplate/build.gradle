@@ -1,14 +1,15 @@
 apply from: '../dependencies/dependencies.gradle'
 
-def realmVersion = '3.0.0'
-
 buildscript {
+  ext.kotlin_version = '1.1.0'
+  ext.realm_version = '3.0.0'
   repositories {
     jcenter()
   }
   dependencies {
-    classpath 'com.android.tools.build:gradle:2.4.0-alpha1'
-    classpath "io.realm:realm-gradle-plugin:3.0.0"
+    classpath 'com.android.tools.build:gradle:2.4.0-alpha3'
+    classpath "io.realm:realm-gradle-plugin:$realm_version"
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
   }
 }
 
