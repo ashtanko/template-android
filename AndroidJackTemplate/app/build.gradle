@@ -1,23 +1,23 @@
 apply plugin: 'com.android.application'
 
-def globalVars = rootProject.extensions.getByName("ext")
 
 dependencies {
 
   // GOOGLE LIBS
-  compile "com.android.support:appcompat-v7:${globalVars["supportVersion"]}"
-  compile "com.android.support.constraint:constraint-layout:${globalVars["constraintLayoutVersion"]}"
+  compile libs.support
+  compile libs.constraint
+
 
   // SQUARE LIBS
-  compile "com.google.dagger:dagger:${globalVars["daggerVersion"]}"
-  annotationProcessor "com.google.dagger:dagger-compiler:${globalVars["daggerVersion"]}"
+  compile libs.dagger
+  annotationProcessor libs.daggerCompiler
 }
 
 
 android {
 
-  compileSdkVersion globalVars["compileSdkVersion"]
-  buildToolsVersion globalVars["buildToolsVersion"]
+  compileSdkVersion versions.compileSdkVersion
+  buildToolsVersion versions.buildToolsVersion
 
   defaultConfig {
     applicationId "io.shtanko.jacktemplate"
