@@ -11,7 +11,6 @@ buildscript {
         classpath gradlePlugins.gradle
         classpath gradlePlugins.kotlin
     }
-
 }
 
 task clean(type: Delete) {
@@ -20,5 +19,5 @@ task clean(type: Delete) {
 
 task wrapper(type: Wrapper) {
     description 'Creates the gradle wrapper.'
-    gradleVersion = '3.3'
+    gradleVersion = '3.4.1'
 }

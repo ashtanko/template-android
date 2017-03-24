@@ -4,16 +4,17 @@ def globalVars = rootProject.extensions.getByName("ext")
 
 dependencies {
   // GOOGLE LIBS
-  compile "com.android.support:appcompat-v7:${globalVars["supportVersion"]}"
-  compile "com.android.support:recyclerview-v7:${globalVars["supportVersion"]}"
-  compile "com.android.support.constraint:constraint-layout:${globalVars["constraintLayoutVersion"]}"
+  compile libs.support
+  compile libs.recyclerview
+  compile libs.constraint
+
 
 }
 
 android {
 
-  compileSdkVersion globalVars["compileSdkVersion"]
-  buildToolsVersion globalVars["buildToolsVersion"]
+  compileSdkVersion versions.compileSdkVersion
+  buildToolsVersion versions.buildToolsVersion
 
   defaultConfig {
     applicationId "io.shtanko.basetemplate"
