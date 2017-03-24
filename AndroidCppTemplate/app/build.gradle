@@ -1,16 +1,14 @@
 apply plugin: 'com.android.application'
 
-def globalVars = rootProject.extensions.getByName("ext")
-
 dependencies {
     // GOOGLE LIBS
-    compile "com.android.support:appcompat-v7:${globalVars["supportVersion"]}"
+    compile libs.support
 }
 
 android {
 
-    compileSdkVersion globalVars["compileSdkVersion"]
-    buildToolsVersion globalVars["buildToolsVersion"]
+    compileSdkVersion versions.compileSdkVersion
+    buildToolsVersion versions.buildToolsVersion
 
     defaultConfig {
         applicationId "io.shtanko.cpptemplate"
