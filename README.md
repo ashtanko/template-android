@@ -10,7 +10,8 @@ A simple repository of templates for android
 - [x] Andorid project with enabled jack and jill
 - [x] Android project with kotlin
 - [x] Android project with kotlin & c/c++ support
-- [ ] Android project with base classes
+- [WIP] Android project with base classes
+- [WIP] Android project with storage
 
 ## Feature
 - [ ] Android project with ffmpeg lib
