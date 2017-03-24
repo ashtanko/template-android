@@ -1,17 +1,41 @@
 apply plugin: 'com.android.application'
 apply plugin: 'android-apt'
 
-def globalVars = rootProject.extensions.getByName("ext")
+dependencies {
 
-// TODO move to global vars
-def retrofitVersion = '2.2.0'
-def okHTTPVersion   = '3.6.0'
-def moxyVersion     = '1.4.6'
+  // GOOGLE LIBS
+  compile   libs.support
+  compile   libs.recyclerview
+  compile   libs.constraint
+  compile   libs.dagger
+  apt       libs.daggerCompiler
+  compile   libs.gson
+
+  // SQUARE LIBS
+  compile libs.retrofit2
+  compile libs.retrofit2ConverterGson
+  compile libs.okhttp3
+  compile libs.retrofit2AdapterRXjava2
+  compile libs.okhttp3LoggingInterceptor
+
+  // RX LIBS
+  compile libs.rxjava2
+  compile libs.rxandroid
+
+  // OTHERS
+  provided libs.jsr250
+  compile libs.cicerone
+
+  // ARELLO MOBILE LIBS
+  compile libs.moxy
+  provided libs.moxyCompiler
+  apt libs.moxyCompiler
+}
 
 android {
 
-  compileSdkVersion globalVars["compileSdkVersion"]
-  buildToolsVersion globalVars["buildToolsVersion"]
+  compileSdkVersion versions.compileSdkVersion
+  buildToolsVersion versions.buildToolsVersion
 
   defaultConfig {
 
@@ -27,34 +51,4 @@ android {
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
   }
-}
-
-dependencies {
-
-  // GOOGLE LIBS
-  compile "com.android.support:appcompat-v7:${globalVars["supportVersion"]}"
-  compile "com.android.support.constraint:constraint-layout:${globalVars["constraintLayoutVersion"]}"
-  compile "com.google.dagger:dagger:${globalVars["daggerVersion"]}"
-  apt "com.google.dagger:dagger-compiler:${globalVars["daggerVersion"]}"
-  compile 'com.google.code.gson:gson:2.7'
-
-  // SQUARE LIBS
-  compile "com.squareup.retrofit2:retrofit:$retrofitVersion"
-  compile "com.squareup.retrofit2:converter-gson:$retrofitVersion"
-  compile "com.squareup.okhttp3:okhttp:$okHTTPVersion"
-  compile "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
-  compile "com.squareup.okhttp3:logging-interceptor:$okHTTPVersion"
-
-  // RX LIBS
-  compile 'io.reactivex.rxjava2:rxjava:2.0.6'
-  compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
-
-  // OTHERS
-  provided 'javax.annotation:jsr250-api:1.0'
-  compile 'ru.terrakok.cicerone:cicerone:1.1'
-
-  // ARELLO MOBILE LIBS
-  compile "com.arello-mobile:moxy:$moxyVersion"
-  provided "com.arello-mobile:moxy-compiler:$moxyVersion"
-  apt "com.arello-mobile:moxy-compiler:$moxyVersion"
 }

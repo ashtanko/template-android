@@ -1,19 +1,17 @@
-apply from: '../dependencies/dependencies.gradle'
+apply from: '../dependencies.gradle'
 
 buildscript {
-  repositories {
-    jcenter()
-  }
-  dependencies {
-    classpath 'com.android.tools.build:gradle:2.4.0-alpha1'
-    classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
-  }
-}
+  apply from: '../dependencies.gradle'
 
-allprojects {
   repositories {
     jcenter()
   }
+
+  dependencies {
+    classpath gradlePlugins.gradle
+    classpath gradlePlugins.apt
+  }
+
 }
 
 task clean(type: Delete) {
@@ -22,5 +20,5 @@ task clean(type: Delete) {
 
 task wrapper(type: Wrapper) {
   description 'Creates the gradle wrapper.'
-  gradleVersion = '3.4.1'
+  gradleVersion = '3.3'
 }
