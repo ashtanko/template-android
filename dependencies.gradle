@@ -1,17 +1,36 @@
 ext.versions = [
-compileSdkVersion = 25
-buildToolsVersion = '25.0.2'
-] 
 
-ext.pluguns = [
+compileSdkVersion : 25,
+buildToolsVersion : "25.0.2",
+
+gradleStable : "2.3.0",
+gradleAlpha  : "2.4.0-alpha3",
+gradleBeta   : "",
+
+realm : "3.0.0",
+kotlinStable : "1.1.0",
+kotlinBeta : "1.1.0",
+
+supportVersion : "25.3.0",
+constraintVersion : "1.0.2",
+kotlinVersion : "1.1.1",
+daggerVersion : "2.10-rc4",
 
 ]
 
+ext.gradlePlugins = [
+  gradle : "com.android.tools.build:gradle:$versions.gradleAlpha",
+  realm : "io.realm:realm-gradle-plugin:$versions.realm",
+  kotlin : "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlinStable",
+]
+
 ext.libs = [
-supportVersion = '25.3.0'
-constraintLayoutVersion = '1.0.2'
-kotlinVersion = '1.1.1'
-daggerVersion = '2.10-rc4'
+support : "com.android.support:appcompat-v7:$versions.supportVersion",
+recyclerview : "com.android.support:recyclerview-v7:$versions.supportVersion",
+constraint : "com.android.support.constraint:constraint-layout:$versions.constraintVersion",
+kotlinReflect : "org.jetbrains.kotlin:kotlin-reflect:$versions.kotlinVersion",
+kotlin : "org.jetbrains.kotlin:kotlin-stdlib-jre7:$versions.kotlinVersion",
+fuel : "com.github.kittinunf.fuel:fuel-android:$versions.kotlinVersion",
 ]
 
 allprojects {

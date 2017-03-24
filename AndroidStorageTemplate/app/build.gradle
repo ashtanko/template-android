@@ -3,25 +3,24 @@ apply plugin: 'realm-android'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
-def globalVars = rootProject.extensions.getByName("ext")
-
 dependencies {
   // GOOGLE LIBS
-  compile "com.android.support:appcompat-v7:${globalVars["supportVersion"]}"
-  compile "com.android.support:recyclerview-v7:${globalVars["supportVersion"]}"
-  compile "com.android.support.constraint:constraint-layout:${globalVars["constraintLayoutVersion"]}"
+  compile libs.support
+  compile libs.recyclerview
+  compile libs.constraint
 
   // KOTLIN
-  compile "org.jetbrains.kotlin:kotlin-reflect:${globalVars["kotlinVersion"]}"
-  compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:${globalVars["kotlinVersion"]}"
+  compile libs.kotlinReflect
+  compile libs.kotlin
 
-  compile "com.github.kittinunf.fuel:fuel-android:${globalVars["kotlinVersion"]}"
+  // NETWORK
+  compile libs.fuel
 }
 
 android {
 
-  compileSdkVersion globalVars["compileSdkVersion"]
-  buildToolsVersion globalVars["buildToolsVersion"]
+  compileSdkVersion versions.compileSdkVersion
+  buildToolsVersion versions.buildToolsVersion
 
   defaultConfig {
     applicationId "io.shtanko.storageemplate"
