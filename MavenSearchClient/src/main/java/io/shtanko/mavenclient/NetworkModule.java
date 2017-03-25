@@ -5,6 +5,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import dagger.Module;
 import dagger.Provides;
+import io.ApiManager;
 import io.reactivex.schedulers.Schedulers;
 import javax.inject.Singleton;
 import okhttp3.OkHttpClient;
@@ -52,5 +53,13 @@ public class NetworkModule {
             .client(okHttpClient)
             .build();
     return retrofit;
+  }
+
+  @Provides @Singleton ApiService provideApiService(Retrofit retrofit) {
+    return retrofit.create(ApiService.class);
+  }
+
+  @Provides @Singleton ApiManager provideApiManager(ApiService apiService) {
+    return new ApiManager(apiService);
   }
 }
