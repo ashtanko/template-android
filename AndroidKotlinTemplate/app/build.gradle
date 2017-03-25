@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
-def globalVars = rootProject.extensions.getByName("ext")
 
 repositories {
     mavenCentral()
@@ -10,18 +9,18 @@ repositories {
 
 dependencies {
     // GOOGLE LIBS
-    compile "com.android.support:appcompat-v7:${globalVars["supportVersion"]}"
-    compile "com.android.support.constraint:constraint-layout:${globalVars["constraintLayoutVersion"]}"
+    compile libs.support
+    compile libs.constraint
 
     // KOTLIN
-    compile "org.jetbrains.kotlin:kotlin-reflect:${globalVars["kotlinVersion"]}"
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:${globalVars["kotlinVersion"]}"
+    compile libs.kotlinReflect
+    compile libs.kotlin
 }
 
 android {
 
-    compileSdkVersion globalVars["compileSdkVersion"]
-    buildToolsVersion globalVars["buildToolsVersion"]
+    compileSdkVersion versions.compileSdkVersion
+    buildToolsVersion versions.buildToolsVersion
 
     defaultConfig {
         applicationId "io.shtanko.kotlintemplate"

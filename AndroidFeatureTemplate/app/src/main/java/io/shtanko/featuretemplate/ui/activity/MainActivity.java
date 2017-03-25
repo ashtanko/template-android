@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
   }
 
   private void checkDependencies() {
-    SimpleLogger.v(null);
     SimpleLogger.v();
     SimpleLogger.v(okClient);
     SimpleLogger.v(retrofit);
