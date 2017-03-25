@@ -1,11 +1,9 @@
-package io;
+package io.shtanko.mavenclient.net;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import io.reactivex.Observable;
-import io.shtanko.mavenclient.ApiService;
-import io.shtanko.mavenclient.ApiTypes;
-import io.shtanko.mavenclient.SearchResponse;
+import io.shtanko.mavenclient.data.model.SearchResponse;
 
 public class ApiManager implements ApiTypes {
 

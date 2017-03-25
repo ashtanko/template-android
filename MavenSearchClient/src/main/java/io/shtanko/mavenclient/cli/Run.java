@@ -1,4 +1,4 @@
-package io.shtanko.mavenclient;
+package io.shtanko.mavenclient.cli;
 
 import javax.inject.Inject;
 

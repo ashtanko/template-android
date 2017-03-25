@@ -1,12 +1,13 @@
-package io.shtanko.mavenclient;
+package io.shtanko.mavenclient.injection.module;
 
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import dagger.Module;
 import dagger.Provides;
-import io.ApiManager;
+import io.shtanko.mavenclient.net.ApiManager;
 import io.reactivex.schedulers.Schedulers;
+import io.shtanko.mavenclient.net.ApiService;
 import javax.inject.Singleton;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;

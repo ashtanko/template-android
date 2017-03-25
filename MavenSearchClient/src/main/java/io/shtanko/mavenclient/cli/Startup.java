@@ -1,7 +1,6 @@
-package io.shtanko.mavenclient;
+package io.shtanko.mavenclient.cli;
 
-import io.ApiManager;
-import io.reactivex.Scheduler;
+import io.shtanko.mavenclient.net.ApiManager;
 import io.reactivex.schedulers.Schedulers;
 import java.io.IOException;
 import javax.inject.Inject;

@@ -1,6 +1,7 @@
-package io.shtanko.mavenclient;
+package io.shtanko.mavenclient.net;
 
 import io.reactivex.Observable;
+import io.shtanko.mavenclient.data.model.SearchResponse;
 
 public interface ApiTypes {
 
