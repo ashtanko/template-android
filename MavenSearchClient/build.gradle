@@ -1,0 +1,42 @@
+plugins {
+  id 'java'
+  id "net.ltgt.apt" version "0.9"
+}
+
+group 'io.shtanko.mavenclient'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+  mavenCentral()
+  maven {
+    url "https://plugins.gradle.org/m2/"
+  }
+}
+
+sourceSets {
+  main {
+    java.srcDirs = ['src/main/java', 'build/generated', 'build/generated/source/apt/main']
+  }
+}
+
+apply from: '../dependencies.gradle'
+
+dependencies {
+  testCompile group: 'junit', name: 'junit', version: '4.12'
+  compile libs.dagger
+  apt libs.daggerCompiler
+  compile libs.retrofit2
+  compile libs.gson
+  compile libs.retrofit2ConverterGson
+  compile libs.okhttp3
+  compile libs.retrofit2AdapterRXjava2
+  compile libs.okhttp3LoggingInterceptor
+  compile libs.rxjava2
+}
+
+task wrapper(type: Wrapper) {
+  description 'Creates the gradle wrapper.'
+  gradleVersion = '3.4.1'
+}

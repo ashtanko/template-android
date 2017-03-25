@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-apply plugin: 'android-apt'
+//apply plugin: 'com.neenbedankt.android-apt'
 
 dependencies {
 
@@ -8,7 +8,7 @@ dependencies {
   compile   libs.recyclerview
   compile   libs.constraint
   compile   libs.dagger
-  apt       libs.daggerCompiler
+  annotationProcessor       libs.daggerCompiler
   compile   libs.gson
 
   // SQUARE LIBS
@@ -29,7 +29,7 @@ dependencies {
   // ARELLO MOBILE LIBS
   compile libs.moxy
   provided libs.moxyCompiler
-  apt libs.moxyCompiler
+  annotationProcessor libs.moxyCompiler
 }
 
 android {

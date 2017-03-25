@@ -11,7 +11,7 @@ kotlinBeta              : "1.1.0",
 supportVersion          : "25.3.0",
 constraintVersion       : "1.0.2",
 kotlinVersion           : "1.1.1",
-daggerVersion           : "2.9",
+daggerVersion           : "2.10",
 gsonVersion             : "2.7",
 retrofit2Version        : "2.2.0",
 okhttpVersion           : "3.6.0",
@@ -35,7 +35,7 @@ support                   : "com.android.support:appcompat-v7:$versions.supportV
 recyclerview              : "com.android.support:recyclerview-v7:$versions.supportVersion",
 constraint                : "com.android.support.constraint:constraint-layout:$versions.constraintVersion",
 dagger                    : "com.google.dagger:dagger:$versions.daggerVersion",
-daggerCompiler            : "com.google.dagger:dagger:$versions.daggerVersion",
+daggerCompiler            : "com.google.dagger:dagger-compiler:$versions.daggerVersion",
 gson                      : "com.google.code.gson:gson:$versions.gsonVersion",
 
 // JETBRAINS LIBS
