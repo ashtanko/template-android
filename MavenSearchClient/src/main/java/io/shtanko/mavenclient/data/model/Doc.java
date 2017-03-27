@@ -1,40 +1,39 @@
 package io.shtanko.mavenclient.data.model;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class Doc {
 
   @SerializedName("id")
-  @Expose
+
   private String id;
   @SerializedName("g")
-  @Expose
+
   private String g;
   @SerializedName("a")
-  @Expose
+
   private String a;
   @SerializedName("latestVersion")
-  @Expose
+
   private String latestVersion;
   @SerializedName("repositoryId")
-  @Expose
+
   private String repositoryId;
   @SerializedName("p")
-  @Expose
+
   private String p;
   @SerializedName("timestamp")
-  @Expose
+
   private Integer timestamp;
   @SerializedName("versionCount")
-  @Expose
+
   private Integer versionCount;
   @SerializedName("text")
-  @Expose
+
   private List<String> text;
   @SerializedName("ec")
-  @Expose
+
   private List<String> ec;
 
   public String getId() {

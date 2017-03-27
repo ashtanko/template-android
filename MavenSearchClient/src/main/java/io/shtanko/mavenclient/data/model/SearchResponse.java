@@ -6,10 +6,8 @@ import com.google.gson.annotations.SerializedName;
 public class SearchResponse {
 
   @SerializedName("responseHeader")
-  @Expose
   private ResponseHeader responseHeader;
   @SerializedName("response")
-  @Expose
   private Response response;
 
   public ResponseHeader getResponseHeader() {

@@ -1,17 +1,16 @@
 package io.shtanko.mavenclient.data.model;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class ResponseHeader {
   @SerializedName("status")
-  @Expose
+
   private Integer status;
   @SerializedName("QTime")
-  @Expose
+
   private Integer qTime;
   @SerializedName("params")
-  @Expose
+
   private Params params;
 
   public Integer getStatus() {

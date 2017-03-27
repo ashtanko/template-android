@@ -1,41 +1,40 @@
 package io.shtanko.mavenclient.data.model;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class Params {
   @SerializedName("spellcheck")
-  @Expose
+
   private String spellcheck;
   @SerializedName("fl")
-  @Expose
+
   private String fl;
   @SerializedName("sort")
-  @Expose
+
   private String sort;
   @SerializedName("indent")
-  @Expose
+
   private String indent;
   @SerializedName("q")
-  @Expose
+
   private String q;
   @SerializedName("qf")
-  @Expose
+
   private String qf;
   @SerializedName("spellcheck.count")
-  @Expose
+
   private String spellcheckCount;
   @SerializedName("wt")
-  @Expose
+
   private String wt;
   @SerializedName("rows")
-  @Expose
+
   private String rows;
   @SerializedName("version")
-  @Expose
+
   private String version;
   @SerializedName("defType")
-  @Expose
+
   private String defType;
 
   public String getSpellcheck() {
