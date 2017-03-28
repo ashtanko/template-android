@@ -1,6 +1,6 @@
 # Android templates in one repository
 
-[![Build Status](https://travis-ci.org/AdamLuisSean/template-android.svg?branch=master)](https://travis-ci.org/AdamLuisSean/template-android)
+[![Build Status](https://travis-ci.org/AdamLuisSean/template-android.svg?branch=develop)](https://travis-ci.org/AdamLuisSean/template-android)
 
 A simple repository of templates for android
 
