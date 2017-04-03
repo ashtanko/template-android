@@ -40,6 +40,7 @@ Java_io_shtanko_cpptemplate_MainActivity_getArray(JNIEnv *env, jobject instance,
     jintArray array;
     array = env->NewIntArray(size);
 
+
     return array;
 
 }
