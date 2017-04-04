@@ -12,6 +12,7 @@ A simple repository of templates for android
 - [x] Android project with kotlin & c/c++ support
 - [ ] Android project with base classes
 - [ ] Android project with storage
+- [ ] Android project with tests
 
 ## Feature
 - [ ] Android project with ffmpeg lib
