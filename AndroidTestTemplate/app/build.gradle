@@ -5,8 +5,10 @@ dependencies {
   compile libs.support
   compile libs.recyclerview
   compile libs.constraint
-  
-  //testCompile libs.junit
+
+  // TESTS
+  testCompile libs.junit
+  androidTestCompile libs.mockito
 }
 
 android {
