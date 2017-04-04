@@ -19,6 +19,8 @@ rxJavaVersion           : "2.0.6",
 rxAndroidVersion        : "2.0.1",
 ciceroneVersion         : "1.1",
 moxyVersion             : "1.4.6",
+junitVersion            : "4.12",
+espressoVersion         : "2.2.2",
 ]
 
 ext.gradlePlugins = [
@@ -62,6 +64,10 @@ fuel                      : "com.github.kittinunf.fuel:fuel-android:$versions.ko
  // ARELLO MOBILE LIBS
 moxy                      : "com.arello-mobile:moxy:$versions.moxyVersion",
 moxyCompiler              : "com.arello-mobile:moxy-compiler:$versions.moxyVersion",
+
+// TESTS
+junit                     : "junit:junit:$versions.junitVersion",
+espresso                  : "com.android.support.test.espresso:espresso-core:$versions.espressoVersion",
 
 ]
 
