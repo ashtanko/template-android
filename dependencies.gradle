@@ -78,8 +78,6 @@ moxyCompiler              : "com.arello-mobile:moxy-compiler:$versions.moxyVersi
 junit                     : "junit:junit:$versions.junitVersion",
 espresso                  : "com.android.support.test.espresso:espresso-core:$versions.espressoVersion",
 mockito                   : "org.mockito:mockito-core:$versions.mockitoVersion",
-
-mockito                   : "org.mockito:mockito-core:$versions.mockitoVersion",
 robolectric               : "org.robolectric:robolectric:$versions.robolectricVersion",
 robolectricMultidex       : "org.robolectric:shadows-multidex:$versions.robolectricVersion",
 robolectricSupport        : "org.robolectric:shadows-support-v4:$versions.robolectricVersion",
