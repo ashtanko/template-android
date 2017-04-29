@@ -1,12 +1,12 @@
 package io.shtanko.mavenclient.data.model;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class SearchResponse {
 
   @SerializedName("responseHeader")
   private ResponseHeader responseHeader;
+
   @SerializedName("response")
   private Response response;
 

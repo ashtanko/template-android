@@ -25,7 +25,7 @@ public class Doc {
   private String p;
   @SerializedName("timestamp")
 
-  private Integer timestamp;
+  private Double timestamp;
   @SerializedName("versionCount")
 
   private Integer versionCount;
@@ -84,11 +84,11 @@ public class Doc {
     this.p = p;
   }
 
-  public Integer getTimestamp() {
+  public Double getTimestamp() {
     return timestamp;
   }
 
-  public void setTimestamp(Integer timestamp) {
+  public void setTimestamp(Double timestamp) {
     this.timestamp = timestamp;
   }
 
