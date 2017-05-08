@@ -35,7 +35,7 @@ firebaseVersion         : "10.2.1",
 mapUtilsVersion         : "0.5",
 multidexVersion         : "1.0.1",
 mobileCenterSdkVersion  : "0.7.0",
-ankoVersion             : "0.9",
+ankoVersion             : "0.10.0-beta-2",
 ]
 
 ext.gradlePlugins = [
