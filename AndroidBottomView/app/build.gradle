@@ -11,6 +11,12 @@ dependencies {
   // GOOGLE LIBS
   compile libs.support
   compile libs.design
+  compile libs.ankoSdksdk23
+  compile libs.ankoAppcompat
+  compile libs.ankoDesign
+  compile libs.ankoRecyclerview
+  compile libs.ankoPercent
+  compile libs.ankoSupport
 
   // KOTLIN
   compile libs.kotlinReflect
