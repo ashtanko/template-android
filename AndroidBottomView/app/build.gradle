@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  // GOOGLE LIBS
+  compile libs.support
+  compile libs.design
+  compile libs.ankoSdksdk23
+  compile libs.ankoAppcompat
+  compile libs.ankoDesign
+  compile libs.ankoRecyclerview
+  compile libs.ankoPercent
+  compile libs.ankoSupport
+
+  // KOTLIN
+  compile libs.kotlinReflect
+  compile libs.kotlin
+}
+
+android {
+
+  compileSdkVersion versions.compileSdkVersion
+  buildToolsVersion versions.buildToolsVersion
+
+  defaultConfig {
+    applicationId "io.shtanko.bottomview"
+    minSdkVersion 15
+    targetSdkVersion 25
+    versionCode 1
+    versionName "1.0"
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+
+  sourceSets {
+    main {
+      java.srcDirs += 'src/main/kotlin'
+      manifest.srcFile 'src/main/AndroidManifest.xml'
+      assets.srcDirs = ['src/main/assets']
+      res.srcDirs = [
+          'src/main/res/main',
+          'src/main/res/resource',
+          'src/main/res']
+    }
+  }
+}

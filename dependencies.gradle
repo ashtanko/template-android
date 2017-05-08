@@ -3,7 +3,7 @@ ext.versions = [
 compileSdkVersion       : 25,
 buildToolsVersion       : "25.0.2",
 gradleStable            : "2.3.0",
-gradleAlpha             : "2.4.0-alpha3",
+gradleAlpha             : "2.4.0-alpha7",
 gradleBeta              : "",
 realm                   : "3.0.0",
 kotlinStable            : "1.1.0",
@@ -25,6 +25,17 @@ mockitoVersion          : "1.10.19",
 robolectricVersion      : "3.0",
 supportTestVersion      : "0.5",
 butterknifeVersion      : "8.5.1",
+glideVersion            : "3.7.0",
+bottomBarVersion        : "2.3.0",
+picassoVersion          : "2.5.2",
+googleMapsVersion       : "10.2.1",
+rxlifecycleVersion      : "2.0.1",
+googleServicesVersion   : "3.0.0",
+firebaseVersion         : "10.2.1",
+mapUtilsVersion         : "0.5",
+multidexVersion         : "1.0.1",
+mobileCenterSdkVersion  : "0.7.0",
+ankoVersion             : "0.9",
 ]
 
 ext.gradlePlugins = [
@@ -46,6 +57,15 @@ gson                      : "com.google.code.gson:gson:$versions.gsonVersion",
 annotations               : "com.android.support:support-annotations:$versions.supportVersion",
 cardview                  : "com.android.support:cardview-v7:$versions.supportVersion",
 design                    : "com.android.support:design:$versions.supportVersion",
+percent                   : "com.android.support:percent:$versions.supportVersion",
+maps                      : "com.google.android.gms:play-services-maps:$versions.googleMapsVersion",
+mapUtils                  : "com.google.maps.android:android-maps-utils:$versions.mapUtilsVersion",
+firebaseCrash             : "com.google.firebase:firebase-crash:$versions.firebaseVersion",
+firebaseMessaging         : "com.google.firebase:firebase-messaging:$versions.firebaseVersion",
+firebaseCore              : "com.google.firebase:firebase-core:$versions.firebaseVersion",
+firebaseRemoteConfig      : "com.google.firebase:firebase-config:$versions.firebaseVersion",
+googleServices            : "com.google.android.gms:play-services:$versions.googleMapsVersion",
+multidex                  : "com.android.support:multidex:$versions.multidexVersion",
 
 // JETBRAINS LIBS
 kotlinReflect             : "org.jetbrains.kotlin:kotlin-reflect:$versions.kotlinVersion",
@@ -64,6 +84,8 @@ butterknifeCompiler       : "com.jakewharton:butterknife-compiler:$versions.butt
 // RX LIBS
 rxjava2                   : "io.reactivex.rxjava2:rxjava:$versions.rxJavaVersion",
 rxandroid                 : "io.reactivex.rxjava2:rxandroid:$versions.rxAndroidVersion",
+rxKotlin                  : "io.reactivex.rxjava2:rxkotlin:$versions.rxKotlinVersion",
+rxRelay                   : "com.jakewharton.rxrelay2:rxrelay:$versions.rxRelayVersio",
 
 // OTHERS
 jsr250                    : "javax.annotation:jsr250-api:1.0",
@@ -83,6 +105,16 @@ robolectricMultidex       : "org.robolectric:shadows-multidex:$versions.robolect
 robolectricSupport        : "org.robolectric:shadows-support-v4:$versions.robolectricVersion",
 supportTestRules          : "com.android.support.test:rules:$versions.supportTestVersion",
 supportTestRunner         : "com.android.support.test:runner:$versions.supportTestVersion",
+
+// ANKO
+ankoSdk15                 : "org.jetbrains.anko:anko-sdk15:$versions.ankoVersion",
+ankoSdksdk23              : "org.jetbrains.anko:anko-sdk23:$versions.ankoVersion",
+ankoAppcompat             : "org.jetbrains.anko:anko-appcompat-v7:$versions.ankoVersion",
+ankoDesign                : "org.jetbrains.anko:anko-design:$versions.ankoVersion",
+ankoRecyclerview          : "org.jetbrains.anko:anko-recyclerview-v7:$versions.ankoVersion",
+ankoPercent               : "org.jetbrains.anko:anko-percent:$versions.ankoVersion",
+ankoCardview              : "org.jetbrains.anko:anko-cardview-v7:$versions.ankoVersion",
+ankoSupport               : "org.jetbrains.anko:anko-support-v4:$versions.ankoVersion",
 ]
 
 allprojects {

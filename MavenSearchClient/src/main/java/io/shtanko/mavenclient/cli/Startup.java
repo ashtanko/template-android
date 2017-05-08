@@ -1,10 +1,10 @@
 package io.shtanko.mavenclient.cli;
 
 import io.shtanko.mavenclient.net.ApiManager;
-import io.reactivex.schedulers.Schedulers;
 import java.io.IOException;
 import javax.inject.Inject;
-import okhttp3.*;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
 import retrofit2.Retrofit;
 
 public class Startup {
@@ -14,19 +14,28 @@ public class Startup {
   @Inject Retrofit retrofit;
 
   @Inject public Startup() {
+
   }
 
-  public void onStart() {
+  void onStart() {
     //try {
     //  post();
     //} catch (IOException e) {
     //  e.printStackTrace();
     //}
 
-    System.out.println("ON START: "+retrofit.baseUrl() + " "+retrofit.converterFactories());
+    System.out.println("ON START: " + retrofit.baseUrl() + " " + retrofit.converterFactories());
 
-    apiManager.search("dagger", 0, "json")
+    apiManager.search("dagger", 50, "json")
         .subscribe(searchResponse -> {
+
+          if (searchResponse.getResponse().getDocs() != null) {
+
+            searchResponse.getResponse().getDocs().forEach(doc -> {
+              System.out.println("DOC: "+doc.getId() + " "+doc.getLatestVersion());
+            });
+          }
+
           System.out.println("RESPONSE: " + searchResponse.getResponse());
         }, throwable -> {
           System.out.println("THROW: " + throwable.getMessage());
