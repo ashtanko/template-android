@@ -31,10 +31,10 @@ public class Controller implements Callback<SearchResponse> {
   }
 
   @Override public void onResponse(Call<SearchResponse> call, Response<SearchResponse> response) {
-    System.out.println("onResponse".toUpperCase() +  " " +response.body().getResponse().getDocs());
+    System.out.println("onResponse".toUpperCase() + " " + response.body().getResponse().getDocs());
   }
 
   @Override public void onFailure(Call<SearchResponse> call, Throwable t) {
-    System.out.println("onFailure".toUpperCase()+ " "+call.request());
+    System.out.println("onFailure".toUpperCase() + " " + call.request());
   }
 }
