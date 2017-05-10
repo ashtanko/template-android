@@ -3,7 +3,6 @@ package io.shtanko.androidbottomview
 import android.support.v4.content.ContextCompat
 import android.view.Gravity
 import android.view.View
-import io.shtanko.liftme.extentions.removeShiftMode
 import org.jetbrains.anko.AnkoComponent
 import org.jetbrains.anko.AnkoContext
 import org.jetbrains.anko.design.bottomNavigationView
@@ -11,7 +10,7 @@ import org.jetbrains.anko.design.coordinatorLayout
 import org.jetbrains.anko.frameLayout
 import org.jetbrains.anko.matchParent
 
-class MainUI<T> : AnkoComponent<T> {
+class MainUI<in T> : AnkoComponent<T> {
 
   val CONTENT_FRAME = R.id.main_container
 
