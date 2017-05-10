@@ -2,18 +2,39 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+  <item
+      android:id="@+id/action_chat"
+      android:enabled="true"
+      android:icon="@drawable/ic_person"
+      app:showAsAction="always"
+      android:title="Грузовые"/>
 
   <item
+      android:id="@+id/action_profile"
       android:enabled="true"
-      android:icon="@android:drawable/ic_lock_power_off"
-      android:title="Test"
+      android:icon="@drawable/ic_person"
       app:showAsAction="ifRoom"
-      />
+      android:title="Грузовые"/>
 
   <item
+      android:id="@+id/action_map"
       android:enabled="true"
-      android:icon="@android:drawable/ic_lock_power_off"
-      android:title="Test2"
-      app:showAsAction="ifRoom"/>
+      android:icon="@drawable/ic_person"
+      app:showAsAction="ifRoom"
+      android:title="Грузовые"/>
+
+  <item
+      android:id="@+id/action_city"
+      android:enabled="true"
+      android:icon="@drawable/ic_person"
+      app:showAsAction="ifRoom"
+      android:title="Грузовые"/>
+
+  <item
+      android:id="@+id/action_cargo"
+      android:enabled="true"
+      android:icon="@drawable/ic_person"
+      app:showAsAction="ifRoom"
+      android:title="Грузовые"/>
 
 </menu>
