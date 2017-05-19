@@ -4,12 +4,12 @@ apply plugin: 'com.android.application'
 dependencies {
 
   // GOOGLE LIBS
-  compile   libs.support
-  compile   libs.recyclerview
-  compile   libs.constraint
-  compile   libs.dagger
-  annotationProcessor       libs.daggerCompiler
-  compile   libs.gson
+  compile libs.support
+  compile libs.recyclerview
+  compile libs.constraint
+  compile libs.dagger
+  annotationProcessor libs.daggerCompiler
+  compile libs.gson
 
   // SQUARE LIBS
   compile libs.retrofit2

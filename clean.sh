@@ -16,10 +16,20 @@ function clean(){
 	done
 }
 
+function cleanDependencies(){
+
+echo "a" | grep -F -w "b"
+echo $?
+
+#   echo $1
+# grep -r "Android" $1
+}
+
 function scan(){
 	for f in $1/*; do
 		if [ -d $f ]; then
-			clean $f
+            cleanDependencies $f
+#clean $f
 		fi
 	done
 }

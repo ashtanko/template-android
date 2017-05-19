@@ -16,7 +16,9 @@ repositories {
 }
 
 sourceSets {
+
   main {
+    test.java.srcDirs = ['src/main/test/java']
     java.srcDirs = ['src/main/java', 'build/generated', 'build/generated/source/apt/main']
   }
 }
@@ -34,6 +36,8 @@ dependencies {
   compile libs.retrofit2AdapterRXjava2
   compile libs.okhttp3LoggingInterceptor
   compile libs.rxjava2
+
+  testCompile 'junit:junit:4.12'
 }
 
 task wrapper(type: Wrapper) {

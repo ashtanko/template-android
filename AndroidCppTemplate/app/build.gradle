@@ -49,6 +49,7 @@ android {
         }
     }
 
+    /*
     productFlavors {
         arm7 {
             ndk {
@@ -93,6 +94,7 @@ android {
             versionCode = 0
         }
     }
+    */
 
     externalNativeBuild {
         cmake {

@@ -31,6 +31,7 @@ android {
     }
   }
 
+  /*
   productFlavors {
     free {
       jackOptions {
@@ -39,6 +40,7 @@ android {
     }
     paid {} // paid variants will run Jack in-process
   }
+  */
   dexOptions {
 
     javaMaxHeapSize "2048M" // used by the out-of-process Jack, ignored if running in-process
